@@ -31,3 +31,37 @@ astronomers, so has a lot of things built in that are astronomy specific.
 
 * **[Astrodendro](https://dendrograms.readthedocs.io/en/stable/)**: Python package for making dendrograms, specifically written in Python for applications within astronomy. (If you don’t know what dendrograms are, they are useful for identifying 2D features in images).
 
+## IDL Packages
+
+* **[Homepage for everything astro IDL](https://idlastro.gsfc.nasa.gov/)**
+
+* **[Short descriptions of each function](https://idlastro.gsfc.nasa.gov/contents.html)**
+
+* **[Github for IDLAstro](https://github.com/wlandsman/IDLAstro)**
+
+* **[sym.pro](https://lesia.obspm.fr/kronos/routines/sym-code.html)**: package for plotting
+
+* **[Plotting with Latex language](http://physics.mnstate.edu/craig/textoidl/textoidl-2-1-2/textoidl.pro)**
+
+* **[Curve Fitting](https://epics.anl.gov/bcda/dataVis/idl_html/CurvFitRef.html)**
+
+## Random Advice
+
+* Comment your code (just do it!)
+
+* Give your variables appropriate names
+
+* Backup everything (see Github discussion)
+
+* Having trouble finding the error?
+
+	* Print things out (brute force way)
+	
+	* Learn to use a debugger
+
+* When first using a script, run it on a smaller, test dataset
+
+* Don’t go editing your original data source
+
+* Make your code easier to read with a [linter](http://www.sublimelinter.com/en/stable/)
+
