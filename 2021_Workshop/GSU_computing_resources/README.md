@@ -4,7 +4,11 @@ Through the astronomy department, you have access to many computing resources th
 
 	ssh username@joy.chara.gsu.edu
 
-If you are off campus, you will need to login to the [GSU VPN](https://technology.gsu.edu/technology-services/it-services/security/virtual-private-network/) to access the network. Once on joy, you should login to your respective computer and **not do your work on joy**. Doing your work on joy will slow down the entire network and make logging in for others difficult. To do this, simply ssh to your domain once on joy using the following:
+For the above, you will need to login to the [GSU VPN](https://technology.gsu.edu/technology-services/it-services/security/virtual-private-network/) to access the network. Otherwise you can provide a port number at login (ask J&J for this) like the follwing:
+
+	ssh -p NNNNNN username@joy.chara.gsu.edu
+
+Once on joy, you should login to your respective computer and **not do your work on joy**. Doing your work on joy will slow down the entire network and make logging in for others difficult. To do this, simply ssh to your domain once on joy using the following:
 
 	ssh username_@domain
 
@@ -24,4 +28,4 @@ Finally, if you write a piece of code, for example, on your laptop, you can tran
 
 	scp ~/path_to_file_location_on_laptop username@joy.chara.gsu.edu:~/path_to_save_location_on_joy/
 
-In all instances, remember that you will need to VPN to the GSU network if you are off campus.
+In all instances, remember that you will need to VPN to the GSU network or provide a port number (where the one change for scp is you provide the port number after -P instead of -p).
