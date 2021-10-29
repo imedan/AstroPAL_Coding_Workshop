@@ -10,7 +10,7 @@ For the above, you will need to login to the [GSU VPN](https://technology.gsu.ed
 
 Once on joy, you should login to your respective computer and **not do your work on joy**. Doing your work on joy will slow down the entire network and make logging in for others difficult. To do this, simply ssh to your domain once on joy using the following:
 
-	ssh username_@domain
+	ssh username@domain
 
 If you are having trouble figuring out which domain you should be going to, you can check this by opening a terminal on the desktop you are assigned to. One here, feel free to start working! There should be versions of IDL, Python, IRAF, etc. already installed for you to use, though you can add newer versions/packages locally if you need to (discussed later).
 
@@ -32,7 +32,7 @@ In all instances, remember that you will need to VPN to the GSU network or provi
 
 # Other Resources
 
-In addition to the above resources, you also have access to High Performance Computing (HPC) nodes. Mainly, we have access to the [Galileo Cluster](https://physics-astro.gsu.edu/galileo-cluster-getting-started-guide/), which offers a few nodes with different computing capabilities. If you would like an account, you can request one [here](https://physics-astro.gsu.edu/galileo-cluster-account-request/).
+In addition to the above resources, you also have access to High Performance Computing (HPC) nodes. Mainly, we have access to the [Galileo Cluster](https://physics-astro.gsu.edu/galileo-cluster-getting-started-guide/), which offers a few nodes with different computing capabilities. If you would like an account, you can request one [here](https://physics-astro.gsu.edu/galileo-cluster-account-request/). Note that accounts only last for a year, and a new one will have to be requested annually.
 
 In the cluster, jobs are submitted using the Slurm command [sbatch](https://slurm.schedmd.com/sbatch.html). An example of a batch script named ``submit.sh`` that wants to run a Python script called ``amazing_code.py`` and write any outputs to ``res.txt`` would look like the following:
 
