@@ -29,3 +29,28 @@ Finally, if you write a piece of code, for example, on your laptop, you can tran
 	scp ~/path_to_file_location_on_laptop username@joy.chara.gsu.edu:~/path_to_save_location_on_joy/
 
 In all instances, remember that you will need to VPN to the GSU network or provide a port number (where the one change for scp is you provide the port number after -P instead of -p).
+
+# Other Resources
+
+In addition to the above resources, you also have access to High Performance Computing (HPC) nodes. Mainly, we have access to the [Galileo Cluster](https://physics-astro.gsu.edu/galileo-cluster-getting-started-guide/), which offers a few nodes with different computing capabilities. If you would like an account, you can request one [here](https://physics-astro.gsu.edu/galileo-cluster-account-request/).
+
+In the cluster, jobs are submitted using the Slurm command [sbatch](https://slurm.schedmd.com/sbatch.html). An example of a batch script named ``submit.sh`` that wants to run a Python script called ``amazing_code.py`` and write any outputs to ``res.txt`` would look like the following:
+
+	#!/bin/bash
+	#SBATCH --job-name amazing_code
+	#SBATCH --output=res.txt
+	#SBATCH --ntasks=1
+	#SBATCH --time=02:00:00
+	#SBATCH --cpus-per-task=8
+	#SBATCH --partition=normal
+	python3 -u amazing_code.py
+
+To then submit the job to the cluster, you would run the following:
+
+	sbatch submit.sh
+
+To see the the progress of your job, you can run
+
+	squeue
+
+Note, that if you think your job will take longer than 12 hours, there is a ``longjobs`` partition that will run jobs for up to 72 hours.
