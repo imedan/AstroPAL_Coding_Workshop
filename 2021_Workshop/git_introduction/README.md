@@ -67,7 +67,7 @@ Now, you have essentially removed the commit of adding the RV fitting function f
 <p align="center">
 <figure>
     <img src='original_branch_back.png' alt='reset' style="width:50%"/>
-    <figcaption class="figure-caption text-center">Before Reset</figcaption>
+    <figcaption>Before Reset</figcaption>
 </figure>
 </p>
 
