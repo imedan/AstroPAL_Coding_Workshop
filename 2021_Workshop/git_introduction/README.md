@@ -6,10 +6,10 @@ In the simplest terms, git is software that allows you to version control projec
 
 ## Creating a Local Git Repository
 
-Say you want to create a local git repository on your computer in the directory ``my_project``, you can initialize the repository as follows:
+Say you want to create a local git repository on your computer in the directory ``my_project``, you can initialize the repository in a "branch" called ``main`` as follows:
 
 	cd my_project
-	git init
+	git init -b main
 
 And BOOM! you have your first repository. 
 
