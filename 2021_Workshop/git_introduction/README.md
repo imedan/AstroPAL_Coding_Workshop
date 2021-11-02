@@ -80,4 +80,22 @@ This can be good/bad depending on the application. One note from most online res
 
 ### Checking Out
 
-Checking out is similar in some ways to reset, in that is moves the head to a previous commit
+Checking out is similar in some ways to reset, in that it moves the head to a previous commit. Unlike reset though, it does not remove any of the commits after this, it essentially is just good to allow you to checkout what your project looked like at a certain branch. To checkout the previous commit, you would run:
+
+	git checkout HEAD-1
+
+Visually, this looks like the following:
+
+<p align="center">
+    <img src='original_branch_back.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>Before Checkout</b>
+</p>
+
+<p align="center">
+    <img src='after_checkout.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>After Checkout</b>
+</p>
+
+As a result, this means you cannot really make any commits after this point without having a "detached head". So, it is usually best to pair this with first creating a new branch for your local repository (discussed later).
