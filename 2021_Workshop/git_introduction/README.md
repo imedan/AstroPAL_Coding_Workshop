@@ -66,6 +66,7 @@ Now, you have essentially removed the commit of adding the RV fitting function f
 
 <p align="center">
     <img src='original_branch_back.png' alt='reset' style="width:50%"/>
+    <b>Before Reset</b>
 </p>
 
 This can be good/bad depending on the application. One note from most online resources is that this type of action should NEVER be done with a public repository as it removes all of the commits ahead of the new head. There will be better options for public repositories discussed below.
