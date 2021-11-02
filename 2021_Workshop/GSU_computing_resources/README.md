@@ -14,7 +14,31 @@ Once on joy, you should login to your respective computer and **not do your work
 
 If you are having trouble figuring out which domain you should be going to, you can check this by opening a terminal on the desktop you are assigned to. One here, feel free to start working! There should be versions of IDL, Python, IRAF, etc. already installed for you to use, though you can add newer versions/packages locally if you need to (discussed later).
 
-# Transfering Files
+# Running Scripts in the Background
+
+What is you want to run a script but also do other things within the same ssh session? It is possible to run processes in the background pretty easily. Say that we have some script called ``amazing_code.py`` that we want to run in the background, to do this you simply have to do the following:
+
+	nohup python amazing_code.py &
+
+In the above, specifically the ``&`` is what sends the process to the background. The output of such a command will be something like:
+
+	[1] 666
+
+where the number listed is the process ID. To kill this process, you can then run:
+
+	kill 666
+
+Now, say that you also want to record all outputs and error outputs from your script in a file, this can be done by running:
+
+	nohup python -u amazing_code.py > log.txt 2>&1 &
+
+where no all outputs (print statements and errors) will be stored in the file ``log.txt``. To see the progress of this process (and really just list all processes running on your computer), you can always use the command:
+
+	ps xw
+
+to show all processes currently running on your computer. What is great about nohup, is the background process will continue to run even if you end your ssh session! So, it becomes a bit easier to leave some code running overnight. Like with everything though, make sure you do this when ssh'ed to your domain and do not do this when on joy!!!
+
+# Transferring Files
 
 Sometimes you may want to transfer code/files from your computer to your laptop though (or vice-versa). This is very easy to do with scp, like in the following:
 
@@ -49,7 +73,7 @@ To then submit the job to the cluster, you would run the following:
 
 	sbatch submit.sh
 
-To see the the progress of your job, you can run
+To see the the progress of your job, you can run:
 
 	squeue
 
