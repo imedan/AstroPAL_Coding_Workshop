@@ -121,3 +121,35 @@ Visually, this looks like the following:
 </p>
 
 What is beneficial about this is you CAN perform this action on a public repository as it preserves the previous commit history.
+
+## Git Branches
+
+In the above section, we showed how it can be a little bit of a pain to undo/edit work in git in your initial local repository. This especially true if you and a collaborator are both trying to work on some code. A good option for both of these instances then is to simply create a new branch! If we want to create a new branch called ``test``, this is very easy to do:
+
+	git branch test
+
+This will create a new branch in the same state as main when the branch is created. Now, as in the previous example, you can tweak your RV fitting function, and commit this change to the new branch:
+
+	git add spectra_reduction.py
+	git commit -m "Change algorithm for RV fitting function"
+
+Visually, this looks like the following:
+
+<p align="center">
+    <img src='original_branch_2.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>Before Branch</b>
+</p>
+
+<p align="center">
+    <img src='after_branch.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>After Branch and Commit</b>
+</p>
+
+Now, you can continue working on this branch worry free about changes to the main branch, as you can always just switch back to main and ignore this test by running:
+
+	git checkout main
+
+If you do end up liking the work you have done in this test branch then, then you can...
+
