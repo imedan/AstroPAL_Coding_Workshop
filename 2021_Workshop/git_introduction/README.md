@@ -99,3 +99,25 @@ Visually, this looks like the following:
 </p>
 
 As a result, this means you cannot really make any commits after this point without having a "detached head". So, it is usually best to pair this with first creating a new branch for your local repository (discussed later).
+
+### Reverting
+
+Unlike the above two methods, reverting does not move the head backwards, but instead undoes a commit by creating a new commit. So, essentially it reverts your project to the previous commit and tacks this change on as a new commit in the project history. To revert to the previous commit, you would run:
+
+	git revert HEAD-1
+
+Visually, this looks like the following:
+
+<p align="center">
+    <img src='original_branch_back.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>Before Revert</b>
+</p>
+
+<p align="center">
+    <img src='after_revert.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>After Revert</b>
+</p>
+
+What is beneficial about this is you CAN perform this action on a public repository as it preserves the previous commit history.
