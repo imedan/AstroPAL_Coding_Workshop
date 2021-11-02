@@ -179,3 +179,25 @@ Visually, this looks like the following:
 Note that if you (or a collaborator) have also made changes to ``main`` while making changes ``test``, git will try its best to merge the branches, except when each branch changed the same part of a file. When trying to merge, git will tell you if there are conflicts and you can display the conflicts by running ``git status``. You can then display the portion of the file that provides the conflict by running ``cat spectra_reduction.py``. Then, you have to edit the line(s) in question in an attempt to resolve the conflict. This isn't always straightforward and will vary from case-to-case, but once the conflict is resolved you should be able to merge the branches. If no conflicts remain, it is usually best practice to then delete the merged branch:
 
 	git branch -d test
+
+## Sharing Your Repository
+
+Up until now, everything you have been doing has been local to your machine. You can share your repository through something like Github though, which may be a good option for sharing code with collaborators or for a publication. To do this, you will need to create a Github account and [create a new repository on Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository). To avoid errors, do not initialize the new repository with README, license, or ``gitignore`` files. You can add these files after your project has been pushed to GitHub. Once you have created the repository, you can create a connection between your local and remote repository on Github:
+
+	git remote add origin  <REMOTE_URL> 
+
+To verify the connection, you should run:
+	
+	git remote -v
+
+Once the connection is verified, you can push all commits in your local repository to the remote one:
+
+	git push -u origin main
+
+Now your local and remote repositories are officially linked! Now anytime you make a commit, you can push it to the remote repository. Normally, your work flow will look like:
+
+	git add spectra_reduction.py
+	git commit -m "Add new function"
+	git push
+
+And now this newest commit will appear on Github for all of your collaborators to see.
