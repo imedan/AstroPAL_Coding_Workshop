@@ -153,3 +153,29 @@ Now, you can continue working on this branch worry free about changes to the mai
 
 If you do end up liking the work you have done in this test branch then, then you can...
 
+## Merging
+
+Say that you like all of the changes you have made in a new branch, you can then merge these changes back to the main branch. Assuming you are currently on the test branch, you can then merge all commits you have made in ``test`` to ``main`` by:
+
+	git checkout main
+	git merge test
+
+This will create a new commit at the head of merge that is a special kind of commit that captures all commits from ``test`` into one unified history. 
+
+Visually, this looks like the following:
+
+<p align="center">
+    <img src='after_branch.png'' alt='reset' style="width:50%"/>
+    <br>
+    <b>Before Merge</b>
+</p>
+
+<p align="center">
+    <img src='after_merge.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>After Merge</b>
+</p>
+
+Note that if you (or a collaborator) have also made changes to ``main`` while making changes ``test``, git will try its best to merge the branches, except when each branch changed the same part of a file. When trying to merge, git will tell you if there are conflicts and you can display the conflicts by running ``git status``. You can then display the portion of the file that provides the conflict by running ``cat spectra_reduction.py``. Then, you have to edit the line(s) in question in an attempt to resolve the conflict. This isn't always straightforward and will vary from case-to-case, but once the conflict is resolved you should be able to merge the branches. If no conflicts remain, it is usually best practice to then delete the merged branch:
+
+	git branch -d test
