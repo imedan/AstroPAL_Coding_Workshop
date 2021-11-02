@@ -70,6 +70,12 @@ Now, you have essentially removed the commit of adding the RV fitting function f
     <b>Before Reset</b>
 </p>
 
+<p align="center">
+    <img src='after_reset.png' alt='reset' style="width:50%"/>
+    <br>
+    <b>After Reset</b>
+</p>
+
 This can be good/bad depending on the application. One note from most online resources is that this type of action should NEVER be done with a public repository as it removes all of the commits ahead of the new head. There will be better options for public repositories discussed below.
 
 ### Checking Out
