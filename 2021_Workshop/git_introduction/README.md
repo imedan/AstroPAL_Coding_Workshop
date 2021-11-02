@@ -64,7 +64,7 @@ Reseting in git will actually move the head (i.e. where you are in the commit hi
 
 Now, you have essentially removed the commit of adding the RV fitting function from the history like it never existed. Visually, this looks like the following:
 
-<p style="text-align:center;">
+<p align="center">
 <figure>
     <img src='original_branch_back.png' alt='reset' style="width:50%"/>
     <figcaption class="figure-caption text-center">Before Reset</figcaption>
