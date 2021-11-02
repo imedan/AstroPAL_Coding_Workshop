@@ -46,3 +46,28 @@ Again, to stage and add the file you would run the following:
 
 	git add spectra_reduction.py
 	git commit -m "Add RV fitting function"
+
+## Reseting vs. Checking Out vs. Reverting
+
+There are multiple ways to undo things you have done with git, though all of them have different consequences. For this current example, lets say that we make some changes to the RV fitting function:
+
+	git add spectra_reduction.py
+	git commit -m "Change algorithm for RV fitting function"
+
+but we no longer like these changes. There are a few ways we can deal with undoing these changes, which are summarized below.
+
+### Reseting
+
+Reseting in git will actually move the head (i.e. where you are in the commit history) backwards to a certain point. So, say for example we wanted to go backwards one commit and redo adding that function to our file, we could run the following:
+
+	git reset HEAD-1
+
+Now, you have essentially removed the commit of adding the RV fitting function from the history like it never existed. Visually, this looks like the following:
+
+![Before Reset](original_branch.png)
+
+This can be good/bad depending on the application. One note from most online resources is that this type of action should NEVER be done with a public repository as it removes all of the commits ahead of the new head. There will be better options for public repositories discussed below.
+
+### Checking Out
+
+Checking out is similar in some ways to reset, in that is moves the head to a previous commit
