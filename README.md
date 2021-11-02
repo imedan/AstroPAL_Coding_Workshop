@@ -12,7 +12,7 @@ If you do not have git installed on your machine, you can install it from [here]
 
 # General Advice
 
-Below is some general advice/resources we wanted to provide all of you incase you wanted to explore some more interesting packages/methods after the workshop!
+Below is some general advice/resources we wanted to provide all of you in case you wanted to explore some more interesting packages/methods after the workshop!
 
 ## Astronomy Python Packages
 
